@@ -25,7 +25,7 @@ sqlite_venv\Scripts\activate.bat
 # Windows - in PowerShell
 sqlite_venv\Scripts\Activate.ps1
 
-Linux/Mac
+# Linux/Mac
 source sqlite_venv/bin/activate
 ```
 
@@ -59,7 +59,7 @@ python src/sqlite.py
 python src/sqlite.py tracks --artist "Jimi Hendrix"
 ```
 
-> ```bash
+> ```
 > Connecting to local database at: resources/chinook.db
 > Successfully connected to database (v2.6.0)
 > Found 17 tracks by Jimi Hendrix
@@ -88,7 +88,7 @@ python src/sqlite.py tracks --artist "Jimi Hendrix"
 python src/sqlite.py tracks --artist "Taylor Swift"
 ```
 
-> ```bash
+> ```
 > Connecting to local database at: resources/chinook.db
 > Successfully connected to database (v2.6.0)
 > No tracks found by Taylor Swift - must be too obscure!
@@ -98,9 +98,11 @@ python src/sqlite.py tracks --artist "Taylor Swift"
 
 ### Explore the database
 
-You can use UI software or the command line / terminal to explore the database. UI tools will allow you to visualize the data more easily - [Beekeeper](https://www.beekeeperstudio.io/) is my favourite for Mac, [DBeaver](https://dbeaver.com/docs/dbeaver/Database-driver-SQLite/) is a popular tool for Windows.
+You can use UI software or the command line / terminal to explore the database.
 
-To explore the database via the command line instead, the SQLite CLI comes pre-installed the Terminal on Mac; on Windows, you can [install SQLite](https://www.servermania.com/kb/articles/install-sqlite). To open the database, simply run `sqlite3 <path_to_a_local_database_file>` - for example:
+- UI tools will allow you to visualize the data more easily - [Beekeeper](https://www.beekeeperstudio.io/) is my favourite for Mac, [DBeaver](https://dbeaver.com/docs/dbeaver/Database-driver-SQLite/) is a popular tool for Windows.
+
+- To explore the database via the command line instead, the SQLite CLI comes pre-installed the Terminal on Mac; on Linux or Windows, you can use [these instructions](https://www.servermania.com/kb/articles/install-sqlite) to install the SQLite CLI. To open the database in the SQLite tool, simply run `sqlite3 <path_to_a_local_database_file>` - for example:
 
 ```bash
 sqlite3 resources/chinook.db
