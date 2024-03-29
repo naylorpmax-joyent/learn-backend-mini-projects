@@ -10,23 +10,23 @@
 
 - Download sample database [here](https://www.sqlitetutorial.net/sqlite-sample-database/) and save it as `learn-sqlite/resources/chinook.db`
 - Install [Python](https://www.python.org/downloads/) if you haven't done so already
-- Create a virtual environment named `db_venv` (or whatever you'd like to call it)
+- Create a virtual environment named `record_label_venv` (or whatever you'd like to call it)
 
 ```bash
-python3 -m venv db_venv
+python3 -m venv record_label_venv
 ```
 
 - Activate the virtual environment:
 
 ```bash
 # Windows - in cmd.exe
-db_venv\Scripts\activate.bat
+record_label_venv\Scripts\activate.bat
 
 # Windows - in PowerShell
-db_venv\Scripts\Activate.ps1
+record_label_venv\Scripts\Activate.ps1
 
 # Linux/Mac
-source db_venv/bin/activate
+source record_label_venv/bin/activate
 ```
 
 - Install the project's Python dependencies
@@ -35,16 +35,34 @@ source db_venv/bin/activate
 pip install -r requirements.txt
 ```
 
-- Give it a whirl! Here are some example commands to get you started - run them in a shell that has your environment variables set. These examples assume you to be in this directory / folder.
+- (Optional) Install `direnv` tool or another environment variable manager ([Direnv](https://direnv.net/), [Direnv for Windows](https://gist.github.com/rmtuckerphx/4ace28c1605300462340ffa7b7001c6d))
+
+## Trying it out
+
+- Set your environment variables
+
+```bash
+# using direnv
+echo 'export DB_FILE_PATH=resources/chinook.db' > .envrc
+direnv allow
+
+# or just run the command each time you open a new shell
+# Linux/Mac
+export DB_FILE_PATH=resources/chinook.db
+```
+
+- Give it a whirl!
+
+Here are some example commands to get you started - run them in a shell that has your environment variables set. These examples assume you to be in this directory / folder.
 
 **Display usage message**
 
 ```bash
-python src/sqlite.py
+python src/record_label.py
 ```
 
 > ```bash
-> Usage: sqlite.py [OPTIONS] COMMAND [ARGS]...
+> Usage: record_label.py.py [OPTIONS] COMMAND [ARGS]...
 >
 > Options:
 >  --help  Show this message and exit.
@@ -56,7 +74,7 @@ python src/sqlite.py
 **Search for tracks by an artist in the database**
 
 ```bash
-python src/sqlite.py tracks --artist "Jimi Hendrix"
+python src/record_label.py tracks --artist "Jimi Hendrix"
 ```
 
 > ```
@@ -85,7 +103,7 @@ python src/sqlite.py tracks --artist "Jimi Hendrix"
 **Search for tracks by an artist that is NOT in the database**
 
 ```bash
-python src/sqlite.py tracks --artist "Taylor Swift"
+python src/record_label.py tracks --artist "Taylor Swift"
 ```
 
 > ```
@@ -114,7 +132,7 @@ The SQLite Tutorial site also provides a diagram showing the sample database's s
 
 Once you've got some ideas of how your tool's users might want to query or interact with this data, try designing and writing some queries, and testing/tweaking them until they do what you want.
 
-Here are a bunch of ideas / questions to get you started - pick any that seem interesting to you, brainstorm others, or start with just one!
+Here are some ideas / questions to get you started - pick any that seem interesting to you, brainstorm others, or start with just one!
 
 **Reads**
 
