@@ -10,23 +10,23 @@
 
 - Download sample database [here](https://www.sqlitetutorial.net/sqlite-sample-database/) and save it as `learn-sqlite/resources/chinook.db`
 - Install [Python](https://www.python.org/downloads/) if you haven't done so already
-- Create a virtual environment named `sqlite_venv` (or whatever you'd like to call it)
+- Create a virtual environment named `db_venv` (or whatever you'd like to call it)
 
 ```bash
-python3 -m venv sqlite_venv
+python3 -m venv db_venv
 ```
 
 - Activate the virtual environment:
 
 ```bash
 # Windows - in cmd.exe
-sqlite_venv\Scripts\activate.bat
+db_venv\Scripts\activate.bat
 
 # Windows - in PowerShell
-sqlite_venv\Scripts\Activate.ps1
+db_venv\Scripts\Activate.ps1
 
 # Linux/Mac
-source sqlite_venv/bin/activate
+source db_venv/bin/activate
 ```
 
 - Install the project's Python dependencies
@@ -35,7 +35,7 @@ source sqlite_venv/bin/activate
 pip install -r requirements.txt
 ```
 
-- Give it a whirl! Here are some example commands to get you started. These examples assume you to be in this directory / folder.
+- Give it a whirl! Here are some example commands to get you started - run them in a shell that has your environment variables set. These examples assume you to be in this directory / folder.
 
 **Display usage message**
 
